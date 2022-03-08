@@ -10,8 +10,7 @@ def time():
     label.config(text = string)
     label.after(1000, time)
 label = tkinter.Label(window, 
-            font = ('calibri', 100),
-            foreground = 'black')
+            font = ('calibri', 100))
 label.configure(bg='light blue')
 label.pack(anchor = 'center')
 
