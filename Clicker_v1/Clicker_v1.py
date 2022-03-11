@@ -1,4 +1,3 @@
-from ctypes import sizeof
 import tkinter
 
 amount = 0
@@ -17,6 +16,7 @@ def commandDown():
 
 
 window = tkinter.Tk()
+window.geometry("200x200")
 def numberCheck():
     if amount == 0:
         window.configure(bg="gray")
@@ -29,10 +29,9 @@ buttonUp = tkinter.Button(text= "Up", command=commandUp, width=50)
 buttonUp.pack(ipadx=10, ipady=10, expand=True)
 
 label = tkinter.Label(text=amount, width=50)
-label.pack(ipadx=10, ipady=10, expand=True)
+label.pack(ipadx=10, ipady=10)
 
-buttonDown = tkinter.Button(text= "Down", command=commandDown, width=50)
-buttonDown.pack(ipadx=10, ipady=10, expand=True)
-
+buttonDown = tkinter.Button(window, text= "Down", command=commandDown, width=50)
+buttonDown.pack(ipadx=10, ipady=10)
 
 window.mainloop()
