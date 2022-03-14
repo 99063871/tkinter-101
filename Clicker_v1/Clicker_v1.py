@@ -14,9 +14,8 @@ def commandDown():
     label.configure(text=amount)
     numberCheck()
 
-
 window = tkinter.Tk()
-window.geometry("200x200")
+window.geometry("300x200")
 def numberCheck():
     if amount == 0:
         window.configure(bg="gray")
@@ -25,13 +24,43 @@ def numberCheck():
     elif amount <=1:
         window.configure(bg="red")
 numberCheck()
-buttonUp = tkinter.Button(text= "Up", command=commandUp, width=50)
-buttonUp.pack(ipadx=10, ipady=10, expand=True)
+buttonUp = tkinter.Button(text= "Up", command=commandUp, width=50, background="white", padx=100)
+buttonUp.pack(
 
-label = tkinter.Label(text=amount, width=50)
-label.pack(ipadx=10, ipady=10)
+            fill='both',
 
-buttonDown = tkinter.Button(window, text= "Down", command=commandDown, width=50)
-buttonDown.pack(ipadx=10, ipady=10)
+            expand=True,
+
+            pady=20,
+
+            padx=20
+
+        )
+
+label = tkinter.Label(text=amount, width=50, background="white")
+label.pack(
+
+            fill='both',
+
+            expand=True,
+
+            pady=20,
+
+            padx=20
+
+        )
+
+buttonDown = tkinter.Button(window, text= "Down", command=commandDown, width=50, background="white")
+buttonDown.pack(
+
+            fill='both',
+
+            expand=True,
+
+            pady=20,
+
+            padx=20
+
+        )
 
 window.mainloop()
